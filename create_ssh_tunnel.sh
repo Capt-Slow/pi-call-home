@@ -1,6 +1,6 @@
 #!/bin/bash
 createTunnel() {
-  /usr/bin/ssh -i lan_ssh.pem -N -R 2222:localhost:22 your@server_ip
+  /usr/bin/ssh -N -R 2222:localhost:22 your@server_ip
   if [[ $? -eq 0 ]]; then
     echo Tunnel to jumpbox created successfully
   else
